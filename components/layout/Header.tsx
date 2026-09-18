@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { urlFor } from "@/sanity/lib/image";
+import Navbar from "./Navbar";
 
 type HeaderProps = {
   studioName?: string;
@@ -10,8 +11,8 @@ export default function Header({ studioName, logo }: HeaderProps) {
   const logoUrl = logo ? urlFor(logo).width(50).height(50).url() : null;
 
   return (
-    <header className="border-b border-neutral-200">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+    <header className="sticky top-0 z-50 border-b border-neutral-200 bg-white">
+      <div className="mx-auto flex max-w-6xl h-[81px] items-center justify-between px-6 py-5">
         <Link href="/" className="text-lg font-medium tracking-tight">
           <div className="flex items-center gap-4">
             {logoUrl && (
@@ -29,28 +30,7 @@ export default function Header({ studioName, logo }: HeaderProps) {
           </div>
         </Link>
 
-        <nav className="flex gap-6 text-sm">
-          <Link
-            href="/"
-            className="text-neutral-700 font-semibold hover:text-black"
-          >
-            Home
-          </Link>
-
-          <a
-            href="#projects"
-            className="text-neutral-700 font-semibold hover:text-black"
-          >
-            Projects
-          </a>
-
-          <a
-            href="#contact-form"
-            className="text-neutral-700 font-semibold hover:text-black"
-          >
-            Contact
-          </a>
-        </nav>
+        <Navbar />
       </div>
     </header>
   );

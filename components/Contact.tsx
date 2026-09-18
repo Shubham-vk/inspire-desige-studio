@@ -16,7 +16,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact-form" className="px-6 py-16">
+    <section id="contact-form" className="md:px-6 md:py-16">
       <div className="mx-auto w-full max-w-3xl">
         <h2 className="mb-8 text-3xl font-medium text-center">
           Send Your Message
