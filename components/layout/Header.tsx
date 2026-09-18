@@ -9,7 +9,6 @@ type HeaderProps = {
 export default function Header({ studioName, logo }: HeaderProps) {
   const logoUrl = logo ? urlFor(logo).width(50).height(50).url() : null;
 
-  console.log("logo url", logoUrl);
   return (
     <header className="border-b border-neutral-200">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
@@ -31,15 +30,24 @@ export default function Header({ studioName, logo }: HeaderProps) {
         </Link>
 
         <nav className="flex gap-6 text-sm">
-          <Link href="/" className="text-neutral-700 hover:text-black">
+          <Link
+            href="/"
+            className="text-neutral-700 font-semibold hover:text-black"
+          >
             Home
           </Link>
 
-          <a href="#projects" className="text-neutral-700 hover:text-black">
+          <a
+            href="#projects"
+            className="text-neutral-700 font-semibold hover:text-black"
+          >
             Projects
           </a>
 
-          <a href="#contact" className="text-neutral-700 hover:text-black">
+          <a
+            href="#contact"
+            className="text-neutral-700 font-semibold hover:text-black"
+          >
             Contact
           </a>
         </nav>
