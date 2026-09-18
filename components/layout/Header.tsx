@@ -45,7 +45,7 @@ export default function Header({ studioName, logo }: HeaderProps) {
           </a>
 
           <a
-            href="#contact"
+            href="#contact-form"
             className="text-neutral-700 font-semibold hover:text-black"
           >
             Contact
